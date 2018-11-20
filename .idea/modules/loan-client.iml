@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<module external.linked.project.id="loan-client" external.linked.project.path="$MODULE_DIR$/../../loan-client" external.root.project.path="$MODULE_DIR$/../../loan-client" external.system.id="GRADLE" type="JAVA_MODULE" version="4">
+  <component name="FacetManager">
+    <facet type="Spring" name="Spring">
+      <configuration />
+    </facet>
+  </component>
+  <component name="NewModuleRootManager">
+    <output url="file://$MODULE_DIR$/../../loan-client/out/production/classes" />
+    <output-test url="file://$MODULE_DIR$/../../loan-client/out/test/classes" />
+    <exclude-output />
+    <content url="file://$MODULE_DIR$/../../loan-client">
+      <sourceFolder url="file://$MODULE_DIR$/../../loan-client/src/main/java" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/../../loan-client/src/main/resources" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/../../loan-client/src/test/java" isTestSource="true" />
+      <sourceFolder url="file://$MODULE_DIR$/../../loan-client/src/test/resources" isTestSource="true" />
+      <excludeFolder url="file://$MODULE_DIR$/../../loan-client/.gradle" />
+      <excludeFolder url="file://$MODULE_DIR$/../../loan-client/build" />
+      <excludeFolder url="file://$MODULE_DIR$/../../loan-client/out" />
+    </content>
+    <orderEntry type="jdk" jdkName="1.8" jdkType="JavaSDK" />
+    <orderEntry type="sourceFolder" forTests="false" />
+    <orderEntry type="library" name="Gradle: org.apache.activemq:activemq-core:5.7.0" level="project" />
+    <orderEntry type="library" name="Gradle: org.slf4j:slf4j-nop:1.7.25" level="project" />
+    <orderEntry type="library" name="Gradle: org.json:json:20180813" level="project" />
+    <orderEntry type="library" name="Gradle: org.apache.activemq:kahadb:5.7.0" level="project" />
+    <orderEntry type="library" name="Gradle: org.slf4j:slf4j-api:1.7.25" level="project" />
+    <orderEntry type="library" name="Gradle: org.apache.geronimo.specs:geronimo-jms_1.1_spec:1.1.1" level="project" />
+    <orderEntry type="library" name="Gradle: org.apache.activemq.protobuf:activemq-protobuf:1.1" level="project" />
+    <orderEntry type="library" name="Gradle: org.fusesource.mqtt-client:mqtt-client:1.3" level="project" />
+    <orderEntry type="library" name="Gradle: org.apache.geronimo.specs:geronimo-j2ee-management_1.1_spec:1.0.1" level="project" />
+    <orderEntry type="library" name="Gradle: org.springframework:spring-context:3.0.7.RELEASE" level="project" />
+    <orderEntry type="library" name="Gradle: commons-net:commons-net:3.1" level="project" />
+    <orderEntry type="library" name="Gradle: org.jasypt:jasypt:1.9.0" level="project" />
+    <orderEntry type="library" name="Gradle: org.fusesource.hawtdispatch:hawtdispatch-transport:1.11" level="project" />
+    <orderEntry type="library" name="Gradle: org.fusesource.hawtbuf:hawtbuf:1.9" level="project" />
+    <orderEntry type="library" name="Gradle: org.springframework:spring-aop:3.0.7.RELEASE" level="project" />
+    <orderEntry type="library" name="Gradle: org.springframework:spring-beans:3.0.7.RELEASE" level="project" />
+    <orderEntry type="library" name="Gradle: org.springframework:spring-expression:3.0.7.RELEASE" level="project" />
+    <orderEntry type="library" name="Gradle: org.springframework:spring-core:3.0.7.RELEASE" level="project" />
+    <orderEntry type="library" name="Gradle: org.springframework:spring-asm:3.0.7.RELEASE" level="project" />
+    <orderEntry type="library" name="Gradle: org.fusesource.hawtdispatch:hawtdispatch:1.11" level="project" />
+    <orderEntry type="library" name="Gradle: aopalliance:aopalliance:1.0" level="project" />
+    <orderEntry type="library" name="Gradle: commons-logging:commons-logging:1.1.1" level="project" />
+  </component>
+</module>
