@@ -4,17 +4,15 @@ import javafx.fxml.FXML;
 import javafx.fxml.Initializable;
 import javafx.scene.control.ListView;
 import javafx.scene.control.TextField;
-import loanclient.model.LoanReply;
-import loanclient.model.LoanRequest;
-import org.json.JSONObject;
+import loanclient.model.*;
 
-import javax.jms.*;
-import javax.naming.Context;
-import javax.naming.InitialContext;
-import javax.naming.NamingException;
+
+import javax.jms.JMSException;
+import javax.jms.Message;
+import javax.jms.MessageListener;
+import javax.jms.TextMessage;
 import java.net.URL;
 import java.util.HashMap;
-import java.util.Properties;
 import java.util.ResourceBundle;
 
 public class LoanClientController implements Initializable {
@@ -26,19 +24,14 @@ public class LoanClientController implements Initializable {
     public ListView<ListViewLine> lvLoanRequestReply;
     HashMap<String,LoanRequest> hmap = new HashMap<>();
 
-
-    Context jndiContext;
-
     public static String myReplyQueue="BrokerToClient";
     public static String myRequestQueue="ClientToBroker";
 
-    Destination sendDestination; // reference to a queue/topic destination
-    Destination replyDestination;
-    Connection connection; // to connect to the ActiveMQ
-    Session session; // session for creating messages, producers and
-    Destination receiveDestination; // reference to a queue/topic destination
-    MessageProducer producer; // for sending messages
-    MessageConsumer consumer; // for receiving messages
+    MessageSenderGateway messageSenderGatewayBroker = new MessageSenderGateway(myRequestQueue);
+    MessageReceiverGateway messageReceiverGatewayBroker = new MessageReceiverGateway(myReplyQueue);
+
+    LoanSerializer loanSerializer = new LoanSerializer();
+
     String jsonString;
 
 
@@ -49,22 +42,19 @@ public class LoanClientController implements Initializable {
         int amount = Integer.parseInt(tfAmount.getText());
         int time = Integer.parseInt(tfTime.getText());
         LoanRequest loanRequest = new LoanRequest(ssn, amount, time);
-        jsonString = new JSONObject()
-                .put("ssn", ssn)
-                .put("amount", amount)
-                .put("time", time).toString();
+
         //create the ListView line with the request and add it to lvLoanRequestReply
         ListViewLine listViewLine = new ListViewLine(loanRequest);
         lvLoanRequestReply.getItems().add(listViewLine);
 
         // to do: send the message with this loanRequest...
-        Message msg = session.createTextMessage(jsonString);
+        Message msg = messageSenderGatewayBroker.createTextMessage(loanSerializer.RequestToString(loanRequest));
         // print all message attributes; but JMSDestination is null
         // session makes the message via MctiveMQ. AtiveMQ assigns unique JMSMessageID
         // to each message.
         System.out.println(msg);
-        msg.setJMSReplyTo(replyDestination);
-        producer.send(sendDestination, msg);
+
+        messageSenderGatewayBroker.send(msg);
 
         //System.out.println("id :" + msg.getJMSMessageID() + "\n" + "body:" + body + "\n");
         hmap.put(msg.getJMSMessageID(),loanRequest);
@@ -99,41 +89,15 @@ public class LoanClientController implements Initializable {
         tfAmount.setText("80000");
         tfTime.setText("30");
         try {
-            Properties props = new Properties();
-            props.setProperty(Context.INITIAL_CONTEXT_FACTORY,
-                    "org.apache.activemq.jndi.ActiveMQInitialContextFactory");
-            props.setProperty(Context.PROVIDER_URL, "tcp://localhost:61616");
-            // connect to the Destination called “myFirstChannel”
-            // queue or topic: “queue.myFirstDestination” or “topic.myFirstDestination”
-            props.put(("queue." + myReplyQueue), myReplyQueue);
-            props.put(("queue." + myRequestQueue), myRequestQueue);
 
-            jndiContext = new InitialContext(props);
-            ConnectionFactory connectionFactory = (ConnectionFactory) jndiContext
-                    .lookup("ConnectionFactory");
-            connection = connectionFactory.createConnection();
-
-            session = connection.createSession(false, Session.AUTO_ACKNOWLEDGE);
-            // connect to the receiver destination
-            receiveDestination = (Destination) jndiContext.lookup(myReplyQueue);
-            sendDestination = (Destination) jndiContext.lookup(myRequestQueue);
-            consumer = session.createConsumer(receiveDestination);
-            producer = session.createProducer(null);
-            // create a text message
-            consumer.setMessageListener(new MessageListener() {
+            messageReceiverGatewayBroker.setListener(new MessageListener() {
                 @Override
                 public void onMessage(Message msg) {
                     try {
                         System.out.println("\nloan reply :"+msg);
-                        JSONObject json = new JSONObject(((TextMessage) msg).getText());
-                        System.out.println("\njson received: " + json+"\n");
-                        System.out.println("reply queue: " + msg.getJMSReplyTo()+"\n");
-                        Integer interest = json.getInt("interest");
-                        String BANK_ID = json.getString("BANK_ID");
-                        LoanReply loanReply = new LoanReply(interest,BANK_ID);
 
                         ListViewLine listViewLine = getRequestReply(hmap.get(msg.getJMSCorrelationID()));
-                        listViewLine.setLoanReply(loanReply);
+                        listViewLine.setLoanReply(loanSerializer.replyFromString(((TextMessage) msg).getText()));
                         lvLoanRequestReply.refresh();
 
                     } catch (JMSException e) {
@@ -142,8 +106,8 @@ public class LoanClientController implements Initializable {
 
                     }
                 }});
-            connection.start();
-        } catch (JMSException | NamingException e) {
+            messageReceiverGatewayBroker.start();
+        } catch (JMSException e) {
             e.printStackTrace();
         }
     }

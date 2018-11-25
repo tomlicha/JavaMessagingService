@@ -28,11 +28,11 @@ public class BankInterestReply {
         this.interest = interest;
     }
 
-    public String getQuoteId() {
+    public String getBankId() {
         return bankId;
     }
 
-    public void setQuoteId(String quoteId) {
+    public void setBankId(String quoteId) {
         this.bankId = quoteId;
     }
 

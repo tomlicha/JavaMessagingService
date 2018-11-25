@@ -18,7 +18,7 @@
       <excludeFolder url="file://$MODULE_DIR$/../../loan-client/build" />
       <excludeFolder url="file://$MODULE_DIR$/../../loan-client/out" />
     </content>
-    <orderEntry type="jdk" jdkName="1.8" jdkType="JavaSDK" />
+    <orderEntry type="inheritedJdk" />
     <orderEntry type="sourceFolder" forTests="false" />
     <orderEntry type="library" name="Gradle: org.apache.activemq:activemq-core:5.7.0" level="project" />
     <orderEntry type="library" name="Gradle: org.slf4j:slf4j-nop:1.7.25" level="project" />
@@ -42,5 +42,6 @@
     <orderEntry type="library" name="Gradle: org.fusesource.hawtdispatch:hawtdispatch:1.11" level="project" />
     <orderEntry type="library" name="Gradle: aopalliance:aopalliance:1.0" level="project" />
     <orderEntry type="library" name="Gradle: commons-logging:commons-logging:1.1.1" level="project" />
+    <orderEntry type="library" name="Gradle: com.owlike:genson:1.4" level="project" />
   </component>
 </module>

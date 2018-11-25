@@ -1,7 +1,10 @@
+import javafx.application.Platform;
 import javafx.fxml.Initializable;
 import javafx.scene.control.ListView;
+import model.BankSerializer;
 import model.LoanReply;
 import model.LoanRequest;
+import model.LoanSerializer;
 import org.json.JSONObject;
 
 import javax.jms.*;
@@ -23,87 +26,49 @@ public class BrokerController implements Initializable {
     public static String myRequestQueueBank="BrokerToBank";
     public static String myReplyQueueBank="BankToBroker";
 
-    Destination replyDestinationClient; // reference to a queue/topic destination
-    Destination receiveDestinationClient;
-    Destination sendDestinationBank; // reference to a queue/topic destination
-    Destination replyDestinationBank; // reference to a queue/topic destination
+    MessageSenderGateway messageSenderGatewayBank = new MessageSenderGateway(myRequestQueueBank);
+    MessageSenderGateway messageSenderGatewayClient = new MessageSenderGateway(myReplyQueueClient);
 
-    Connection connection; // to connect to the ActiveMQ
-    Session session; // session for creating messages, producers and
+    MessageReceiverGateway messageReceiverGatewayClient = new MessageReceiverGateway(myRequestQueueClient);
+    MessageReceiverGateway messageReceiverGatewayBank = new MessageReceiverGateway(myReplyQueueBank);
 
-    MessageProducer producerBank; // for sending messages
-    MessageConsumer consumerBank; // for receiving messages
-
-    MessageProducer producerClient; // for sending messages
-    MessageConsumer consumerClient; // for receiving messages
+    LoanSerializer loanSerializer = new LoanSerializer();
+    BankSerializer bankSerializer = new BankSerializer();
 
     HashMap<String,ListViewLine> hmap = new HashMap<>();
 
 
     public BrokerController() {
         try {
-            Properties props = new Properties();
-            props.setProperty(Context.INITIAL_CONTEXT_FACTORY,
-                    "org.apache.activemq.jndi.ActiveMQInitialContextFactory");
-            props.setProperty(Context.PROVIDER_URL, "tcp://localhost:61616");
-            // connect to the Destination called “myFirstChannel”
 
-            // queue or topic: “queue.myFirstDestination” or “topic.myFirstDestination”
-            props.put(("queue." + myRequestQueueClient), myRequestQueueClient);
-            props.put(("queue." + myReplyQueueClient), myReplyQueueClient);
-            props.put(("queue." + myRequestQueueBank), myRequestQueueBank);
-            props.put(("queue." + myReplyQueueBank), myReplyQueueBank);
-
-            Context jndiContext = new InitialContext(props);
-            ConnectionFactory connectionFactory = (ConnectionFactory) jndiContext
-                    .lookup("ConnectionFactory");
-            connection = connectionFactory.createConnection();
-
-            session = connection.createSession(false, Session.AUTO_ACKNOWLEDGE);
-
-            // connect to the sender destination
-            producerClient = session.createProducer(null);
-            producerBank = session.createProducer(null);
-
-            // connect to the receiver destination
-            receiveDestinationClient = (Destination) jndiContext.lookup(myRequestQueueClient);
-            replyDestinationClient = (Destination) jndiContext.lookup(myReplyQueueClient);
-            sendDestinationBank = (Destination) jndiContext.lookup(myRequestQueueBank);
-            replyDestinationBank = (Destination) jndiContext.lookup(myReplyQueueBank);
-
-            consumerClient = session.createConsumer(receiveDestinationClient);
-            consumerBank = session.createConsumer(replyDestinationBank);
-
-            consumerClient.setMessageListener(new MessageListener() {
+            messageReceiverGatewayClient.setListener(new MessageListener() {
                 @Override
                 public void onMessage(Message msg) {
                     try {
                         String id=msg.getJMSMessageID();
-                        JSONObject json = new JSONObject(((TextMessage) msg).getText());
-                        System.out.println("\njson received: " + json+"\n");
-                        System.out.println("reply queue: " + msg.getJMSReplyTo()+"\n");
-                        Integer ssn = json.getInt("ssn");
-                        Integer time = json.getInt("time");
-                        Integer amount = json.getInt("amount");
-                        LoanRequest loanRequest = new LoanRequest(ssn, amount, time);
-                        System.out.println("\nnew object : ssn :"+loanRequest.getSsn()+"\n"+"time:"+loanRequest.getTime()+"\n"+"amount:"+loanRequest.getAmount());
+
+                        LoanRequest loanRequest = loanSerializer.requestFromString(((TextMessage) msg).getText());
+
                         ListViewLine listViewLine = new ListViewLine(loanRequest);
-                        lvBrokerRequestReply.getItems().add(listViewLine);
+
+                        Platform.runLater(new Runnable() {
+                            @Override
+                            public void run() {
+                                lvBrokerRequestReply.getItems().add(listViewLine);
+
+                            }
+                        });
                         System.out.println("\nhmap input: " + id+" & "+listViewLine+"\n");
 
                         hmap.put(id,listViewLine);
 
-                        String jsonString = new JSONObject()
-                                .put("amount", amount)
-                                .put("time", time).toString();
-                        // create a text message
-                        Message bankmsg = session.createTextMessage(jsonString);
-                        // print all message attributes; but JMSDestination is null
-                        // session makes the message via MctiveMQ. AtiveMQ assigns unique JMSMessageID
-                        // to each message.
+                        String jsonString =  loanSerializer.RequestToString(loanRequest);
+
+                        Message bankmsg = messageSenderGatewayBank.createTextMessage(jsonString);
+
                         bankmsg.setJMSCorrelationID(msg.getJMSMessageID());
-                        bankmsg.setJMSReplyTo(replyDestinationBank);
-                        producerBank.send(sendDestinationBank, bankmsg);
+
+                        messageSenderGatewayBank.send(bankmsg);
                         System.out.println("\nmessage sent:\n"+bankmsg);
                     } catch (JMSException e) {
                         e.printStackTrace();
@@ -111,43 +76,35 @@ public class BrokerController implements Initializable {
 
                 }
             }});
+            messageReceiverGatewayClient.start();
 
-            consumerBank.setMessageListener(new MessageListener() {
+            messageReceiverGatewayBank.setListener(new MessageListener() {
                 @Override
                 public void onMessage(Message msg) {
                     try {
-                        System.out.println("map content:\n");
-                        for (String key : hmap.keySet()) {
-                            System.out.println(key);
-                        }
-                        System.out.println("\nmessage received from bank:\n"+msg);
-                        JSONObject json = new JSONObject(((TextMessage) msg).getText());
-                        System.out.println("\njson received: " + json+"\n");
-                        Double interest = json.getDouble("interest");
-                        String BANK_ID = json.getString("BANK_ID");
-                        LoanReply loanReply = new LoanReply(interest,BANK_ID);
-                        System.out.println("\nnew object : interest:"+loanReply.getInterest()+"\n"+"BANK_ID:"+loanReply.getQuoteID());
+
+
+                        LoanReply loanReply = loanSerializer.replyFromString(((TextMessage) msg).getText());
+
                         ListViewLine listViewLine = hmap.get(msg.getJMSCorrelationID());
-                        System.out.println(listViewLine);
+
                         listViewLine.setLoanReply(loanReply);
+
                         lvBrokerRequestReply.refresh();
-                        String jsonString = new JSONObject()
-                                .put("interest", interest)
-                                .put("BANK_ID", BANK_ID).toString();
+
+                        String jsonString = loanSerializer.replyToString(loanReply);
+
                         // create a text message
-                        Message clientMessage = session.createTextMessage(jsonString);
-                        // print all message attributes; but JMSDestination is null
-                        // session makes the message via MctiveMQ. AtiveMQ assigns unique JMSMessageID
-                        // to each message.
+                        Message clientMessage = messageSenderGatewayClient.createTextMessage(jsonString);
+
                         clientMessage.setJMSCorrelationID(msg.getJMSCorrelationID());
-                        producerClient.send(replyDestinationClient, clientMessage);
-                        System.out.println("\nmessage sent:\n"+clientMessage);
+                        messageSenderGatewayClient.send(clientMessage);
                     } catch (JMSException e) {
                         e.printStackTrace();
                     }
                 }});
-            connection.start(); // this is needed to start receiving messages
-        } catch (NamingException | JMSException e) {
+            messageReceiverGatewayBank.start(); // this is needed to start receiving messages
+        } catch (JMSException e) {
             e.printStackTrace();
         }
 

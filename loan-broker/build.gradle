@@ -20,4 +20,7 @@ dependencies {
     compile group: 'org.slf4j', name: 'slf4j-nop', version: '1.7.25'
     // https://mvnrepository.com/artifact/org.json/json
     compile group: 'org.json', name: 'json', version: '20180813'
+    // https://mvnrepository.com/artifact/com.owlike/genson
+    compile group: 'com.owlike', name: 'genson', version: '1.4'
+
 }
