@@ -12,6 +12,7 @@
   </component>
   <component name="JavacSettings">
     <option name="ADDITIONAL_OPTIONS_OVERRIDE">
+      <module name="bank" options="--add-modules=javafx.controls,javafx.fxml,javafx.graphics" />
       <module name="bank_main" options="--add-modules=javafx.graphics,javafx.fxml,javafx.base,javafx.controls" />
       <module name="loan-broker" options="--add-modules=javafx.graphics,javafx.fxml,javafx.base,javafx.controls" />
       <module name="loan-client" options="--add-modules=javafx.fxml,javafx.controls" />

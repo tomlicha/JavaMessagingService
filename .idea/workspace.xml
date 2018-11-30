@@ -2,48 +2,26 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="95af7865-671e-4c40-81bb-0ad261159111" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/loan-broker/src/main/java/model/ListViewLine.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/compiler.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/compiler.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/modules/bank.iml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/modules/bank.iml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/modules/loan-broker.iml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/modules/loan-broker.iml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/modules/loan-client.iml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/modules/loan-client.iml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/bank/.gradle/4.8/fileHashes/fileHashes.bin" beforeDir="false" afterPath="$PROJECT_DIR$/bank/.gradle/4.8/fileHashes/fileHashes.bin" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/bank/.gradle/4.8/fileHashes/fileHashes.lock" beforeDir="false" afterPath="$PROJECT_DIR$/bank/.gradle/4.8/fileHashes/fileHashes.lock" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/bank/out/production/classes/bank/gui/BankController$1.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/bank/out/production/classes/bank/gui/BankController.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/bank/out/production/classes/bank/gui/BankMain$1.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/bank/out/production/classes/bank/gui/BankMain.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/bank/out/production/classes/bank/gui/ListViewLine.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/bank/out/production/classes/bank/model/BankInterestReply.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/bank/out/production/classes/bank/model/BankInterestRequest.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/bank/out/production/classes/bank/gui/BankController$1$1.class" beforeDir="false" afterPath="$PROJECT_DIR$/bank/out/production/classes/bank/gui/BankController$1$1.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/bank/out/production/classes/bank/gui/BankController$1.class" beforeDir="false" afterPath="$PROJECT_DIR$/bank/out/production/classes/bank/gui/BankController$1.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/bank/out/production/classes/bank/gui/BankController.class" beforeDir="false" afterPath="$PROJECT_DIR$/bank/out/production/classes/bank/gui/BankController.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/bank/out/production/classes/bank/gui/ListViewLine.class" beforeDir="false" afterPath="$PROJECT_DIR$/bank/out/production/classes/bank/gui/ListViewLine.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/bank/src/main/java/bank/gui/BankController.java" beforeDir="false" afterPath="$PROJECT_DIR$/bank/src/main/java/bank/gui/BankController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/bank/src/main/java/bank/model/BankInterestReply.java" beforeDir="false" afterPath="$PROJECT_DIR$/bank/src/main/java/bank/model/BankInterestReply.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/loan-broker/.gradle/4.8/fileHashes/fileHashes.bin" beforeDir="false" afterPath="$PROJECT_DIR$/loan-broker/.gradle/4.8/fileHashes/fileHashes.bin" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/loan-broker/.gradle/4.8/fileHashes/fileHashes.lock" beforeDir="false" afterPath="$PROJECT_DIR$/loan-broker/.gradle/4.8/fileHashes/fileHashes.lock" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/loan-broker/build.gradle" beforeDir="false" afterPath="$PROJECT_DIR$/loan-broker/build.gradle" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/bank/src/main/java/bank/gui/ListViewLine.java" beforeDir="false" afterPath="$PROJECT_DIR$/bank/src/main/java/bank/gui/ListViewLine.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/loan-broker/out/production/classes/BrokerController$1$1.class" beforeDir="false" afterPath="$PROJECT_DIR$/loan-broker/out/production/classes/BrokerController$1$1.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/loan-broker/out/production/classes/BrokerController$1.class" beforeDir="false" afterPath="$PROJECT_DIR$/loan-broker/out/production/classes/BrokerController$1.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/loan-broker/out/production/classes/BrokerController$2.class" beforeDir="false" afterPath="$PROJECT_DIR$/loan-broker/out/production/classes/BrokerController$2.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/loan-broker/out/production/classes/BrokerController.class" beforeDir="false" afterPath="$PROJECT_DIR$/loan-broker/out/production/classes/BrokerController.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/loan-broker/out/production/classes/BrokerMain$1.class" beforeDir="false" afterPath="$PROJECT_DIR$/loan-broker/out/production/classes/BrokerMain$1.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/loan-broker/out/production/classes/BrokerMain.class" beforeDir="false" afterPath="$PROJECT_DIR$/loan-broker/out/production/classes/BrokerMain.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/loan-broker/out/production/classes/ListViewLine.class" beforeDir="false" afterPath="$PROJECT_DIR$/loan-broker/out/production/classes/ListViewLine.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/loan-broker/out/production/classes/model/BankInterestRequest.class" beforeDir="false" afterPath="$PROJECT_DIR$/loan-broker/out/production/classes/model/BankInterestRequest.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/loan-broker/out/production/classes/model/LoanReply.class" beforeDir="false" afterPath="$PROJECT_DIR$/loan-broker/out/production/classes/model/LoanReply.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/loan-broker/out/production/classes/model/LoanRequest.class" beforeDir="false" afterPath="$PROJECT_DIR$/loan-broker/out/production/classes/model/LoanRequest.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/loan-broker/out/production/classes/ListViewLine.class" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/loan-broker/src/main/java/BrokerController.java" beforeDir="false" afterPath="$PROJECT_DIR$/loan-broker/src/main/java/BrokerController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/loan-broker/src/main/java/model/LoanReply.java" beforeDir="false" afterPath="$PROJECT_DIR$/loan-broker/src/main/java/model/LoanReply.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/loan-client/.gradle/4.8/fileHashes/fileHashes.bin" beforeDir="false" afterPath="$PROJECT_DIR$/loan-client/.gradle/4.8/fileHashes/fileHashes.bin" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/loan-client/.gradle/4.8/fileHashes/fileHashes.lock" beforeDir="false" afterPath="$PROJECT_DIR$/loan-client/.gradle/4.8/fileHashes/fileHashes.lock" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/loan-client/out/production/classes/loanclient/gui/ListViewLine.class" beforeDir="false" afterPath="$PROJECT_DIR$/loan-client/out/production/classes/loanclient/gui/ListViewLine.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/loan-broker/src/main/java/ListViewLine.java" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/loan-client/out/production/classes/loanclient/gui/LoanClientController$1.class" beforeDir="false" afterPath="$PROJECT_DIR$/loan-client/out/production/classes/loanclient/gui/LoanClientController$1.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/loan-client/out/production/classes/loanclient/gui/LoanClientController.class" beforeDir="false" afterPath="$PROJECT_DIR$/loan-client/out/production/classes/loanclient/gui/LoanClientController.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/loan-client/out/production/classes/loanclient/gui/LoanClientMain$1.class" beforeDir="false" afterPath="$PROJECT_DIR$/loan-client/out/production/classes/loanclient/gui/LoanClientMain$1.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/loan-client/out/production/classes/loanclient/gui/LoanClientMain.class" beforeDir="false" afterPath="$PROJECT_DIR$/loan-client/out/production/classes/loanclient/gui/LoanClientMain.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/loan-client/out/production/classes/loanclient/model/LoanReply.class" beforeDir="false" afterPath="$PROJECT_DIR$/loan-client/out/production/classes/loanclient/model/LoanReply.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/loan-client/out/production/classes/loanclient/model/LoanRequest.class" beforeDir="false" afterPath="$PROJECT_DIR$/loan-client/out/production/classes/loanclient/model/LoanRequest.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/loan-client/src/main/java/loanclient/gui/LoanClientController.java" beforeDir="false" afterPath="$PROJECT_DIR$/loan-client/src/main/java/loanclient/gui/LoanClientController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/loan-client/src/main/java/loanclient/model/LoanReply.java" beforeDir="false" afterPath="$PROJECT_DIR$/loan-client/src/main/java/loanclient/model/LoanReply.java" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/bank/.gradle/" />
     <ignored path="$PROJECT_DIR$/bank/build/" />
@@ -137,19 +115,23 @@
     <session id="-2124330811">
       <usages-collector id="statistics.lifecycle.project">
         <counts>
-          <entry key="project.closed" value="11" />
+          <entry key="project.closed" value="15" />
           <entry key="project.open.time.2" value="1" />
+          <entry key="project.open.time.26" value="1" />
           <entry key="project.open.time.28" value="1" />
           <entry key="project.open.time.33" value="1" />
           <entry key="project.open.time.35" value="1" />
+          <entry key="project.open.time.40" value="1" />
+          <entry key="project.open.time.42" value="1" />
           <entry key="project.open.time.43" value="1" />
           <entry key="project.open.time.45" value="1" />
-          <entry key="project.open.time.49" value="1" />
+          <entry key="project.open.time.48" value="1" />
+          <entry key="project.open.time.49" value="2" />
           <entry key="project.open.time.5" value="1" />
           <entry key="project.open.time.57" value="2" />
           <entry key="project.open.time.62" value="1" />
           <entry key="project.open.time.64" value="1" />
-          <entry key="project.opened" value="12" />
+          <entry key="project.opened" value="17" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.extensions.open">
@@ -158,14 +140,14 @@
           <entry key="fxml" value="15" />
           <entry key="gradle" value="15" />
           <entry key="gradlew" value="1" />
-          <entry key="java" value="97" />
+          <entry key="java" value="134" />
           <entry key="properties" value="1" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.types.open">
         <counts>
           <entry key="Groovy" value="15" />
-          <entry key="JAVA" value="97" />
+          <entry key="JAVA" value="134" />
           <entry key="PLAIN_TEXT" value="2" />
           <entry key="Properties" value="1" />
           <entry key="XML" value="15" />
@@ -175,27 +157,64 @@
         <counts>
           <entry key="fxml" value="91" />
           <entry key="gradle" value="10" />
-          <entry key="java" value="3455" />
+          <entry key="java" value="5715" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.types.edit">
         <counts>
           <entry key="Groovy" value="10" />
-          <entry key="JAVA" value="3455" />
+          <entry key="JAVA" value="5715" />
           <entry key="XML" value="91" />
         </counts>
       </usages-collector>
     </session>
   </component>
   <component name="FileEditorManager">
-    <splitter split-orientation="horizontal" split-proportion="0.5">
+    <splitter split-orientation="horizontal" split-proportion="0.53291816">
       <split-first>
         <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
           <file pinned="false" current-in-tab="false">
-            <entry file="file://$PROJECT_DIR$/loan-client/src/main/java/loanclient/gui/LoanClientController.java">
+            <entry file="file://$PROJECT_DIR$/loan-broker/src/main/java/ClientAppGateway.java">
               <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="68">
-                  <caret line="17" column="13" selection-start-line="17" selection-start-column="13" selection-end-line="17" selection-end-column="13" />
+                <state relative-caret-position="245">
+                  <caret line="54" column="27" selection-start-line="54" selection-end-line="55" />
+                  <folding>
+                    <element signature="imports" expanded="true" />
+                  </folding>
+                </state>
+              </provider>
+            </entry>
+          </file>
+          <file pinned="false" current-in-tab="true">
+            <entry file="file://$PROJECT_DIR$/loan-broker/src/main/java/BrokerController.java">
+              <provider selected="true" editor-type-id="text-editor">
+                <state relative-caret-position="459">
+                  <caret line="72" column="42" selection-start-line="72" selection-start-column="41" selection-end-line="72" selection-end-column="42" />
+                  <folding>
+                    <element signature="imports" expanded="true" />
+                    <element signature="e#1673#2566#0" expanded="true" />
+                    <element signature="e#2565#2566#0" expanded="true" />
+                    <element signature="e#2593#3584#0" expanded="true" />
+                    <element signature="e#3583#3584#0" expanded="true" />
+                  </folding>
+                </state>
+              </provider>
+            </entry>
+          </file>
+          <file pinned="false" current-in-tab="false">
+            <entry file="file://$PROJECT_DIR$/loan-broker/src/main/java/model/ListViewLine.java">
+              <provider selected="true" editor-type-id="text-editor">
+                <state relative-caret-position="114">
+                  <caret line="51" selection-start-line="51" selection-end-line="51" />
+                </state>
+              </provider>
+            </entry>
+          </file>
+          <file pinned="false" current-in-tab="false">
+            <entry file="file://$PROJECT_DIR$/bank/src/main/java/bank/gui/BankController.java">
+              <provider selected="true" editor-type-id="text-editor">
+                <state relative-caret-position="1071">
+                  <caret line="74" column="5" selection-start-line="74" selection-start-column="5" selection-end-line="74" selection-end-column="5" />
                   <folding>
                     <element signature="imports" expanded="true" />
                   </folding>
@@ -204,82 +223,55 @@
             </entry>
           </file>
           <file pinned="false" current-in-tab="false">
-            <entry file="file://$PROJECT_DIR$/loan-client/src/main/java/loanclient/model/BankInterestReply.java">
+            <entry file="file://$PROJECT_DIR$/bank/src/main/java/bank/BankBrokerAppGateway.java">
               <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="119">
-                  <caret line="7" column="13" selection-start-line="7" selection-start-column="13" selection-end-line="7" selection-end-column="13" />
+                <state relative-caret-position="323">
+                  <caret line="27" column="26" selection-start-line="27" selection-start-column="26" selection-end-line="27" selection-end-column="26" />
+                  <folding>
+                    <element signature="imports" expanded="true" />
+                  </folding>
                 </state>
               </provider>
             </entry>
           </file>
           <file pinned="false" current-in-tab="false">
-            <entry file="file://$PROJECT_DIR$/loan-client/src/main/java/loanclient/model/BankInterestRequest.java">
+            <entry file="file://$PROJECT_DIR$/loan-client/src/main/java/loanclient/gui/LoanClientController.java">
               <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="119">
-                  <caret line="7" column="13" selection-start-line="7" selection-start-column="13" selection-end-line="7" selection-end-column="13" />
+                <state relative-caret-position="884">
+                  <caret line="62" column="13" selection-start-line="35" selection-start-column="33" selection-end-line="35" selection-end-column="45" />
+                  <folding>
+                    <element signature="imports" expanded="true" />
+                  </folding>
                 </state>
               </provider>
             </entry>
           </file>
           <file pinned="false" current-in-tab="false">
-            <entry file="file://$PROJECT_DIR$/loan-client/src/main/java/loanclient/model/BankSerializer.java">
+            <entry file="file://$PROJECT_DIR$/loan-client/src/main/java/loanclient/gui/ListViewLine.java">
               <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="119">
-                  <caret line="7" column="24" selection-start-line="7" selection-start-column="24" selection-end-line="7" selection-end-column="24" />
+                <state relative-caret-position="289">
+                  <caret line="18" selection-start-line="18" selection-end-line="18" />
                 </state>
               </provider>
             </entry>
           </file>
           <file pinned="false" current-in-tab="false">
-            <entry file="file://$PROJECT_DIR$/loan-client/src/main/java/loanclient/model/LoanReply.java">
+            <entry file="file://$PROJECT_DIR$/bank/src/main/java/bank/gui/ListViewLine.java">
               <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="272">
-                  <caret line="16" column="5" selection-start-line="16" selection-start-column="5" selection-end-line="16" selection-end-column="5" />
+                <state relative-caret-position="136">
+                  <caret line="9" column="13" selection-start-line="9" selection-start-column="13" selection-end-line="9" selection-end-column="13" />
                 </state>
               </provider>
             </entry>
           </file>
           <file pinned="false" current-in-tab="false">
-            <entry file="file://$PROJECT_DIR$/loan-client/src/main/java/loanclient/model/LoanRequest.java">
+            <entry file="file://$PROJECT_DIR$/loan-client/src/main/java/loanclient/LoanBrokerAppGateway.java">
               <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="170">
-                  <caret line="10" column="24" selection-start-line="10" selection-start-column="24" selection-end-line="10" selection-end-column="24" />
-                </state>
-              </provider>
-            </entry>
-          </file>
-          <file pinned="false" current-in-tab="true">
-            <entry file="file://$PROJECT_DIR$/loan-client/src/main/java/loanclient/model/MessageSenderGateway.java">
-              <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="68">
-                  <caret line="8" column="13" selection-start-line="8" selection-start-column="13" selection-end-line="8" selection-end-column="13" />
-                </state>
-              </provider>
-            </entry>
-          </file>
-          <file pinned="false" current-in-tab="false">
-            <entry file="file://$PROJECT_DIR$/loan-client/src/main/java/loanclient/model/MessageReceiverGateway.java">
-              <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="68">
-                  <caret line="8" column="13" selection-start-line="8" selection-start-column="13" selection-end-line="8" selection-end-column="13" />
-                </state>
-              </provider>
-            </entry>
-          </file>
-          <file pinned="false" current-in-tab="false">
-            <entry file="file://$PROJECT_DIR$/bank/src/main/java/bank/model/BankSerializer.java">
-              <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="357">
-                  <caret line="21" selection-start-line="21" selection-end-line="22" selection-end-column="5" />
-                </state>
-              </provider>
-            </entry>
-          </file>
-          <file pinned="false" current-in-tab="false">
-            <entry file="file://$PROJECT_DIR$/loan-client/src/main/java/loanclient/model/LoanSerializer.java">
-              <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="102">
-                  <caret line="6" column="13" selection-start-line="6" selection-start-column="13" selection-end-line="6" selection-end-column="13" />
+                <state relative-caret-position="833">
+                  <caret line="55" column="52" selection-start-line="55" selection-start-column="7" selection-end-line="55" selection-end-column="52" />
+                  <folding>
+                    <element signature="imports" expanded="true" />
+                  </folding>
                 </state>
               </provider>
             </entry>
@@ -288,11 +280,59 @@
       </split-first>
       <split-second>
         <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-          <file pinned="false" current-in-tab="true">
-            <entry file="file://$PROJECT_DIR$/loan-client/src/main/java/loanclient/gui/LoanClientController.java">
+          <file pinned="false" current-in-tab="false">
+            <entry file="file://$PROJECT_DIR$/bank/src/main/java/bank/BankBrokerAppGateway.java">
               <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="119">
-                  <caret line="7" selection-start-line="7" selection-end-line="7" />
+                <state relative-caret-position="141">
+                  <caret line="26" selection-start-line="27" selection-start-column="12" selection-end-line="27" selection-end-column="40" />
+                  <folding>
+                    <element signature="imports" expanded="true" />
+                  </folding>
+                </state>
+              </provider>
+            </entry>
+          </file>
+          <file pinned="false" current-in-tab="false">
+            <entry file="file://$PROJECT_DIR$/loan-broker/src/main/java/BankAppGateway.java">
+              <provider selected="true" editor-type-id="text-editor">
+                <state relative-caret-position="191">
+                  <caret line="33" column="50" selection-start-line="33" selection-start-column="50" selection-end-line="33" selection-end-column="50" />
+                  <folding>
+                    <element signature="imports" expanded="true" />
+                  </folding>
+                </state>
+              </provider>
+            </entry>
+          </file>
+          <file pinned="false" current-in-tab="true">
+            <entry file="file://$PROJECT_DIR$/loan-broker/src/main/java/ClientAppGateway.java">
+              <provider selected="true" editor-type-id="text-editor">
+                <state relative-caret-position="143">
+                  <caret line="51" column="32" lean-forward="true" selection-start-line="51" selection-start-column="32" selection-end-line="51" selection-end-column="32" />
+                  <folding>
+                    <element signature="imports" expanded="true" />
+                  </folding>
+                </state>
+              </provider>
+            </entry>
+          </file>
+          <file pinned="false" current-in-tab="false">
+            <entry file="file://$PROJECT_DIR$/loan-broker/src/main/java/MessageReceiverGateway.java">
+              <provider selected="true" editor-type-id="text-editor">
+                <state relative-caret-position="204">
+                  <caret line="16" column="4" selection-start-line="16" selection-start-column="4" selection-end-line="16" selection-end-column="4" />
+                </state>
+              </provider>
+            </entry>
+          </file>
+          <file pinned="false" current-in-tab="false">
+            <entry file="file://$PROJECT_DIR$/loan-client/src/main/java/loanclient/LoanBrokerAppGateway.java">
+              <provider selected="true" editor-type-id="text-editor">
+                <state relative-caret-position="187">
+                  <caret line="41" column="16" selection-start-line="41" selection-start-column="16" selection-end-line="41" selection-end-column="16" />
+                  <folding>
+                    <element signature="imports" expanded="true" />
+                  </folding>
                 </state>
               </provider>
             </entry>
@@ -311,18 +351,10 @@
   </component>
   <component name="FindInProjectRecents">
     <findStrings>
-      <find>lvLoanRequestReply</find>
-      <find>replyDestination</find>
-      <find>sendDestinationBank</find>
-      <find>receiveDestination</find>
-      <find>btnSendBankInterestReplyClicked</find>
-      <find>btnSendLoanRequestClicked</find>
-      <find>hmap</find>
       <find>btn</find>
       <find>hma</find>
       <find>ListView</find>
       <find>corre</find>
-      <find>Loan</find>
       <find>LoanRe</find>
       <find>getJMSMessageID</find>
       <find>corr</find>
@@ -337,10 +369,18 @@
       <find>replyDestinationBank</find>
       <find>replyto</find>
       <find>toString</find>
-      <find>loan</find>
       <find>BANK_ID</find>
       <find>BankInterestReply</find>
+      <find>loan</find>
+      <find>seria</find>
+      <find>getRequestReply</find>
+      <find>Loan</find>
+      <find>loanSerializer</find>
+      <find>hmap2</find>
+      <find>sendLo</find>
+      <find>bankSerializer</find>
       <find>Bank</find>
+      <find>hmap</find>
     </findStrings>
   </component>
   <component name="Git.Settings">
@@ -1398,7 +1438,6 @@
         <option value="$PROJECT_DIR$/loan-client/src/main/java/loanclient/gui/LoanClientMain.java" />
         <option value="$PROJECT_DIR$/bank/src/main/java/bank/gui/BankMain.java" />
         <option value="$PROJECT_DIR$/../../SOT/JMSTom/JMS2/jms-requestor/src/main/java/Requestor.java" />
-        <option value="$PROJECT_DIR$/loan-broker/src/main/java/ListViewLine.java" />
         <option value="$PROJECT_DIR$/loan-broker/out/production/resources/broker.fxml" />
         <option value="$PROJECT_DIR$/loan-broker/src/main/resources/test.fxml" />
         <option value="$PROJECT_DIR$/loan-broker/src/main/java/BrokerMain.java" />
@@ -1426,10 +1465,17 @@
         <option value="$PROJECT_DIR$/loan-client/src/main/java/loanclient/model/LoanSerializer.java" />
         <option value="$PROJECT_DIR$/loan-client/src/main/java/loanclient/model/BankInterestReply.java" />
         <option value="$PROJECT_DIR$/loan-client/src/main/java/loanclient/model/BankSerializer.java" />
-        <option value="$PROJECT_DIR$/bank/src/main/java/bank/gui/BankController.java" />
-        <option value="$PROJECT_DIR$/loan-client/src/main/java/loanclient/gui/LoanClientController.java" />
-        <option value="$PROJECT_DIR$/loan-broker/src/main/java/BrokerController.java" />
         <option value="$PROJECT_DIR$/loan-client/src/main/java/loanclient/model/LoanReply.java" />
+        <option value="$PROJECT_DIR$/bank/src/main/java/bank/gui/ListViewLine.java" />
+        <option value="$PROJECT_DIR$/loan-client/src/main/java/loanclient/gui/LoanClientController.java" />
+        <option value="$PROJECT_DIR$/loan-client/src/main/java/loanclient/LoanBrokerAppGateway.java" />
+        <option value="$PROJECT_DIR$/bank/src/main/java/bank/gui/BankController.java" />
+        <option value="$PROJECT_DIR$/loan-broker/src/main/java/ClientAppGateway.java" />
+        <option value="$PROJECT_DIR$/loan-broker/src/main/java/ListViewLine.java" />
+        <option value="$PROJECT_DIR$/loan-broker/src/main/java/model/ListViewLine.java" />
+        <option value="$PROJECT_DIR$/bank/src/main/java/bank/BankBrokerAppGateway.java" />
+        <option value="$PROJECT_DIR$/loan-broker/src/main/java/BankAppGateway.java" />
+        <option value="$PROJECT_DIR$/loan-broker/src/main/java/BrokerController.java" />
       </list>
     </option>
   </component>
@@ -1446,8 +1492,8 @@
     </treeState>
   </component>
   <component name="ProjectFrameBounds" extendedState="6">
-    <option name="x" value="-9" />
-    <option name="y" value="7" />
+    <option name="x" value="-28" />
+    <option name="y" value="-26" />
     <option name="width" value="1382" />
     <option name="height" value="744" />
   </component>
@@ -1459,8 +1505,37 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
-      <pane id="AndroidView" />
       <pane id="PackagesPane" />
+      <pane id="AndroidView" />
+      <pane id="Scope">
+        <subPane subId="Scope 'Project Files'; set:Project Files; class com.intellij.psi.search.scope.ProjectFilesScope">
+          <expand>
+            <path>
+              <item name="loan-broker" type="3d21c010:ScopeViewTreeModel$ProjectNode" />
+              <item name="loan-broker" type="2674bda8:ScopeViewTreeModel$GroupNode" />
+            </path>
+            <path>
+              <item name="loan-broker" type="3d21c010:ScopeViewTreeModel$ProjectNode" />
+              <item name="loan-broker" type="2674bda8:ScopeViewTreeModel$GroupNode" />
+              <item name="src" type="9f88c78c:ScopeViewTreeModel$FileNode" />
+            </path>
+            <path>
+              <item name="loan-broker" type="3d21c010:ScopeViewTreeModel$ProjectNode" />
+              <item name="loan-broker" type="2674bda8:ScopeViewTreeModel$GroupNode" />
+              <item name="src" type="9f88c78c:ScopeViewTreeModel$FileNode" />
+              <item name="main" type="9f88c78c:ScopeViewTreeModel$FileNode" />
+            </path>
+            <path>
+              <item name="loan-broker" type="3d21c010:ScopeViewTreeModel$ProjectNode" />
+              <item name="loan-broker" type="2674bda8:ScopeViewTreeModel$GroupNode" />
+              <item name="src" type="9f88c78c:ScopeViewTreeModel$FileNode" />
+              <item name="main" type="9f88c78c:ScopeViewTreeModel$FileNode" />
+              <item name="java" type="9f88c78c:ScopeViewTreeModel$FileNode" />
+            </path>
+          </expand>
+          <select />
+        </subPane>
+      </pane>
       <pane id="ProjectPane">
         <subPane>
           <expand>
@@ -1605,114 +1680,12 @@
           <select />
         </subPane>
       </pane>
-      <pane id="Scope">
-        <subPane subId="Scope 'Project Files'; set:Project Files; class com.intellij.psi.search.scope.ProjectFilesScope">
-          <expand>
-            <path>
-              <item name="loan-broker" type="3d21c010:ScopeViewTreeModel$ProjectNode" />
-              <item name="loan-client" type="2674bda8:ScopeViewTreeModel$GroupNode" />
-            </path>
-            <path>
-              <item name="loan-broker" type="3d21c010:ScopeViewTreeModel$ProjectNode" />
-              <item name="loan-client" type="2674bda8:ScopeViewTreeModel$GroupNode" />
-              <item name=".gradle" type="9f88c78c:ScopeViewTreeModel$FileNode" />
-            </path>
-            <path>
-              <item name="loan-broker" type="3d21c010:ScopeViewTreeModel$ProjectNode" />
-              <item name="loan-client" type="2674bda8:ScopeViewTreeModel$GroupNode" />
-              <item name="gradle" type="9f88c78c:ScopeViewTreeModel$FileNode" />
-            </path>
-            <path>
-              <item name="loan-broker" type="3d21c010:ScopeViewTreeModel$ProjectNode" />
-              <item name="loan-client" type="2674bda8:ScopeViewTreeModel$GroupNode" />
-              <item name="gradle" type="9f88c78c:ScopeViewTreeModel$FileNode" />
-              <item name="wrapper" type="9f88c78c:ScopeViewTreeModel$FileNode" />
-            </path>
-            <path>
-              <item name="loan-broker" type="3d21c010:ScopeViewTreeModel$ProjectNode" />
-              <item name="loan-client" type="2674bda8:ScopeViewTreeModel$GroupNode" />
-              <item name="out" type="9f88c78c:ScopeViewTreeModel$FileNode" />
-            </path>
-            <path>
-              <item name="loan-broker" type="3d21c010:ScopeViewTreeModel$ProjectNode" />
-              <item name="loan-client" type="2674bda8:ScopeViewTreeModel$GroupNode" />
-              <item name="out" type="9f88c78c:ScopeViewTreeModel$FileNode" />
-              <item name="production" type="9f88c78c:ScopeViewTreeModel$FileNode" />
-            </path>
-            <path>
-              <item name="loan-broker" type="3d21c010:ScopeViewTreeModel$ProjectNode" />
-              <item name="loan-client" type="2674bda8:ScopeViewTreeModel$GroupNode" />
-              <item name="out" type="9f88c78c:ScopeViewTreeModel$FileNode" />
-              <item name="production" type="9f88c78c:ScopeViewTreeModel$FileNode" />
-              <item name="resources" type="9f88c78c:ScopeViewTreeModel$FileNode" />
-            </path>
-            <path>
-              <item name="loan-broker" type="3d21c010:ScopeViewTreeModel$ProjectNode" />
-              <item name="loan-client" type="2674bda8:ScopeViewTreeModel$GroupNode" />
-              <item name="src" type="9f88c78c:ScopeViewTreeModel$FileNode" />
-            </path>
-            <path>
-              <item name="loan-broker" type="3d21c010:ScopeViewTreeModel$ProjectNode" />
-              <item name="loan-client" type="2674bda8:ScopeViewTreeModel$GroupNode" />
-              <item name="src" type="9f88c78c:ScopeViewTreeModel$FileNode" />
-              <item name="main" type="9f88c78c:ScopeViewTreeModel$FileNode" />
-            </path>
-            <path>
-              <item name="loan-broker" type="3d21c010:ScopeViewTreeModel$ProjectNode" />
-              <item name="loan-client" type="2674bda8:ScopeViewTreeModel$GroupNode" />
-              <item name="src" type="9f88c78c:ScopeViewTreeModel$FileNode" />
-              <item name="main" type="9f88c78c:ScopeViewTreeModel$FileNode" />
-              <item name="java" type="9f88c78c:ScopeViewTreeModel$FileNode" />
-            </path>
-            <path>
-              <item name="loan-broker" type="3d21c010:ScopeViewTreeModel$ProjectNode" />
-              <item name="loan-client" type="2674bda8:ScopeViewTreeModel$GroupNode" />
-              <item name="src" type="9f88c78c:ScopeViewTreeModel$FileNode" />
-              <item name="main" type="9f88c78c:ScopeViewTreeModel$FileNode" />
-              <item name="java" type="9f88c78c:ScopeViewTreeModel$FileNode" />
-              <item name="loanclient" type="9f88c78c:ScopeViewTreeModel$FileNode" />
-            </path>
-            <path>
-              <item name="loan-broker" type="3d21c010:ScopeViewTreeModel$ProjectNode" />
-              <item name="loan-client" type="2674bda8:ScopeViewTreeModel$GroupNode" />
-              <item name="src" type="9f88c78c:ScopeViewTreeModel$FileNode" />
-              <item name="main" type="9f88c78c:ScopeViewTreeModel$FileNode" />
-              <item name="java" type="9f88c78c:ScopeViewTreeModel$FileNode" />
-              <item name="loanclient" type="9f88c78c:ScopeViewTreeModel$FileNode" />
-              <item name="gui" type="9f88c78c:ScopeViewTreeModel$FileNode" />
-            </path>
-            <path>
-              <item name="loan-broker" type="3d21c010:ScopeViewTreeModel$ProjectNode" />
-              <item name="loan-client" type="2674bda8:ScopeViewTreeModel$GroupNode" />
-              <item name="src" type="9f88c78c:ScopeViewTreeModel$FileNode" />
-              <item name="main" type="9f88c78c:ScopeViewTreeModel$FileNode" />
-              <item name="java" type="9f88c78c:ScopeViewTreeModel$FileNode" />
-              <item name="loanclient" type="9f88c78c:ScopeViewTreeModel$FileNode" />
-              <item name="model" type="9f88c78c:ScopeViewTreeModel$FileNode" />
-            </path>
-            <path>
-              <item name="loan-broker" type="3d21c010:ScopeViewTreeModel$ProjectNode" />
-              <item name="loan-client" type="2674bda8:ScopeViewTreeModel$GroupNode" />
-              <item name="src" type="9f88c78c:ScopeViewTreeModel$FileNode" />
-              <item name="main" type="9f88c78c:ScopeViewTreeModel$FileNode" />
-              <item name="resources" type="9f88c78c:ScopeViewTreeModel$FileNode" />
-            </path>
-            <path>
-              <item name="loan-broker" type="3d21c010:ScopeViewTreeModel$ProjectNode" />
-              <item name="loan-client" type="2674bda8:ScopeViewTreeModel$GroupNode" />
-              <item name="src" type="9f88c78c:ScopeViewTreeModel$FileNode" />
-              <item name="test" type="9f88c78c:ScopeViewTreeModel$FileNode" />
-            </path>
-          </expand>
-          <select />
-        </subPane>
-      </pane>
     </panes>
   </component>
   <component name="PropertiesComponent">
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="aspect.path.notification.shown" value="true" />
-    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1543003482967" />
+    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1543519159940" />
     <property name="jdk.selected.JAVA_MODULE" value="1.8" />
     <property name="last_opened_file_path" value="$PROJECT_DIR$" />
     <property name="nodejs_interpreter_path.stuck_in_default_project" value="undefined stuck path" />
@@ -1730,6 +1703,7 @@
       <recent name="D:\Work\FONTYS\SAI\loan-broker\loan-broker\src\main\resources" />
     </key>
     <key name="CopyClassDialog.RECENTS_KEY">
+      <recent name="bank" />
       <recent name="bank.model" />
       <recent name="model" />
       <recent name="" />
@@ -1753,7 +1727,7 @@
       </list>
     </option>
   </component>
-  <component name="RunManager" selected="Application.BrokerMain">
+  <component name="RunManager" selected="Application.loan-client">
     <configuration name="BrokerMain" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
       <option name="MAIN_CLASS_NAME" value="BrokerMain" />
       <module name="loan-broker" />
@@ -1847,17 +1821,23 @@
       <workItem from="1542893972740" duration="7726000" />
       <workItem from="1542965754278" duration="5796000" />
       <workItem from="1542995374466" duration="7810000" />
-      <workItem from="1543144121936" duration="1200000" />
+      <workItem from="1543144121936" duration="2406000" />
+      <workItem from="1543243009594" duration="2479000" />
+      <workItem from="1543482300491" duration="1342000" />
+      <workItem from="1543498690617" duration="12303000" />
+      <workItem from="1543513176663" duration="5067000" />
+      <workItem from="1543569128585" duration="2071000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="64177000" />
+    <option name="totallyTimeSpent" value="88645000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1382" height="744" extended-state="6" />
+    <editor active="true" />
     <layout>
-      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.18532526" />
+      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.14977308" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info id="Designer" order="2" />
       <window_info id="Image Layers" order="3" />
@@ -1866,14 +1846,14 @@
       <window_info id="Capture Tool" order="6" />
       <window_info anchor="bottom" id="Spring" order="0" />
       <window_info anchor="bottom" id="Message" order="1" />
-      <window_info anchor="bottom" id="Find" order="2" weight="0.3295082" />
-      <window_info anchor="bottom" id="Run" order="3" weight="0.23606557" />
+      <window_info anchor="bottom" id="Find" order="2" weight="0.17377049" />
+      <window_info active="true" anchor="bottom" id="Run" order="3" visible="true" weight="0.31311476" />
       <window_info anchor="bottom" id="Debug" order="4" weight="0.4" />
       <window_info anchor="bottom" id="Cvs" order="5" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="6" weight="0.4" />
       <window_info anchor="bottom" id="TODO" order="7" />
       <window_info anchor="bottom" id="Build" order="8" />
-      <window_info active="true" anchor="bottom" id="Terminal" order="9" visible="true" weight="0.3295082" />
+      <window_info anchor="bottom" id="Terminal" order="9" weight="0.3295082" />
       <window_info anchor="bottom" id="Event Log" order="10" side_tool="true" />
       <window_info anchor="bottom" id="Messages" order="11" weight="0.2852459" />
       <window_info anchor="bottom" id="Database Changes" order="12" show_stripe_button="false" />
@@ -1897,6 +1877,13 @@
   <component name="VcsContentAnnotationSettings">
     <option name="myLimit" value="2678400000" />
   </component>
+  <component name="XDebuggerManager">
+    <watches-manager>
+      <configuration name="Application">
+        <watch expression="hmap" language="JAVA" />
+      </configuration>
+    </watches-manager>
+  </component>
   <component name="editorHistoryManager">
     <entry file="jar://C:/Program Files/Java/jdk-10.0.2/lib/src.zip!/javafx.fxml/javafx/fxml/FXMLLoader.java">
       <provider selected="true" editor-type-id="text-editor">
@@ -1906,13 +1893,6 @@
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/loan-broker/src/main/resources/test.fxml" />
-    <entry file="file://$PROJECT_DIR$/loan-broker/src/main/java/ListViewLine.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="85">
-          <caret line="6" column="6" selection-start-line="6" selection-start-column="6" selection-end-line="6" selection-end-column="6" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/loan-broker/out/production/resources/broker.fxml">
       <provider editor-type-id="JavaFX-Scene-Builder" />
       <provider selected="true" editor-type-id="text-editor">
@@ -1925,13 +1905,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="153">
           <caret line="15" column="62" selection-start-line="15" selection-start-column="43" selection-end-line="15" selection-end-column="62" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/bank/src/main/java/bank/gui/ListViewLine.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="17">
-          <caret line="9" column="6" selection-start-line="9" selection-start-column="6" selection-end-line="9" selection-end-column="6" />
         </state>
       </provider>
     </entry>
@@ -1972,22 +1945,12 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/loan-client/src/main/java/loanclient/gui/ListViewLine.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="272">
-          <caret line="17" column="5" selection-start-line="17" selection-start-column="5" selection-end-line="17" selection-end-column="5" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/loan-broker/src/main/java/MessageSenderGateway.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="612">
           <caret line="40" column="32" selection-end-line="53" />
         </state>
       </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/loan-broker/src/main/java/MessageReceiverGateway.java">
-      <provider selected="true" editor-type-id="text-editor" />
     </entry>
     <entry file="file://$PROJECT_DIR$/bank/src/main/java/bank/model/MessageSenderGateway.java">
       <provider selected="true" editor-type-id="text-editor" />
@@ -2010,13 +1973,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="340">
           <caret line="20" column="14" selection-start-line="20" selection-start-column="14" selection-end-line="20" selection-end-column="14" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/bank/src/main/java/bank/model/BankInterestReply.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="476">
-          <caret line="34" column="25" selection-start-line="34" selection-start-column="25" selection-end-line="34" selection-end-column="25" />
         </state>
       </provider>
     </entry>
@@ -2070,13 +2026,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/bank/src/main/java/bank/gui/BankController.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="187">
-          <caret line="83" column="47" selection-start-line="83" selection-start-column="47" selection-end-line="83" selection-end-column="47" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/loan-broker/settings.gradle">
       <provider selected="true" editor-type-id="text-editor" />
     </entry>
@@ -2092,13 +2041,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="459">
           <caret line="34" column="39" selection-start-line="34" selection-start-column="39" selection-end-line="34" selection-end-column="39" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/loan-broker/src/main/java/BrokerController.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1462">
-          <caret line="90" column="35" selection-start-line="90" selection-start-column="35" selection-end-line="90" selection-end-column="35" />
         </state>
       </provider>
     </entry>
@@ -2133,6 +2075,13 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/bank/src/main/java/bank/model/BankInterestReply.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="221">
+          <caret line="13" column="5" selection-start-line="17" selection-start-column="11" selection-end-line="17" selection-end-column="28" />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/loan-client/src/main/java/loanclient/model/BankInterestRequest.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="119">
@@ -2161,6 +2110,13 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/loan-client/src/main/java/loanclient/model/MessageSenderGateway.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="102">
+          <caret line="10" column="19" selection-start-line="10" selection-start-column="19" selection-end-line="10" selection-end-column="19" />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/loan-client/src/main/java/loanclient/model/MessageReceiverGateway.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="68">
@@ -2182,17 +2138,105 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/loan-client/src/main/java/loanclient/model/MessageSenderGateway.java">
+    <entry file="file://$PROJECT_DIR$/bank/src/main/java/bank/gui/BankController.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="68">
-          <caret line="8" column="13" selection-start-line="8" selection-start-column="13" selection-end-line="8" selection-end-column="13" />
+        <state relative-caret-position="1071">
+          <caret line="74" column="5" selection-start-line="74" selection-start-column="5" selection-end-line="74" selection-end-column="5" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/loan-client/src/main/java/loanclient/gui/LoanClientController.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="119">
-          <caret line="7" selection-start-line="7" selection-end-line="7" />
+        <state relative-caret-position="884">
+          <caret line="62" column="13" selection-start-line="35" selection-start-column="33" selection-end-line="35" selection-end-column="45" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/loan-client/src/main/java/loanclient/gui/ListViewLine.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="289">
+          <caret line="18" selection-start-line="18" selection-end-line="18" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/bank/src/main/java/bank/gui/ListViewLine.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="136">
+          <caret line="9" column="13" selection-start-line="9" selection-start-column="13" selection-end-line="9" selection-end-column="13" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/bank/src/main/java/bank/BankBrokerAppGateway.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="323">
+          <caret line="27" column="26" selection-start-line="27" selection-start-column="26" selection-end-line="27" selection-end-column="26" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/loan-broker/src/main/java/MessageReceiverGateway.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="204">
+          <caret line="16" column="4" selection-start-line="16" selection-start-column="4" selection-end-line="16" selection-end-column="4" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/loan-broker/src/main/java/model/ListViewLine.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="114">
+          <caret line="51" selection-start-line="51" selection-end-line="51" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/loan-client/src/main/java/loanclient/LoanBrokerAppGateway.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="833">
+          <caret line="55" column="52" selection-start-line="55" selection-start-column="7" selection-end-line="55" selection-end-column="52" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/loan-broker/src/main/java/BankAppGateway.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="191">
+          <caret line="33" column="50" selection-start-line="33" selection-start-column="50" selection-end-line="33" selection-end-column="50" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/loan-broker/src/main/java/ClientAppGateway.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="245">
+          <caret line="54" column="27" selection-start-line="54" selection-end-line="55" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/loan-broker/src/main/java/BrokerController.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="459">
+          <caret line="72" column="42" selection-start-line="72" selection-start-column="41" selection-end-line="72" selection-end-column="42" />
+          <folding>
+            <element signature="imports" expanded="true" />
+            <element signature="e#1673#2566#0" expanded="true" />
+            <element signature="e#2565#2566#0" expanded="true" />
+            <element signature="e#2593#3584#0" expanded="true" />
+            <element signature="e#3583#3584#0" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>

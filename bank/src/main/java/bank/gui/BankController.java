@@ -1,6 +1,8 @@
 package bank.gui;
 
-import bank.model.*;
+import bank.BankBrokerAppGateway;
+import bank.model.BankInterestReply;
+import bank.model.BankInterestRequest;
 import javafx.application.Platform;
 import javafx.fxml.FXML;
 import javafx.fxml.Initializable;
@@ -8,11 +10,7 @@ import javafx.scene.control.ListView;
 import javafx.scene.control.TextField;
 
 import javax.jms.JMSException;
-import javax.jms.Message;
-import javax.jms.MessageListener;
-import javax.jms.TextMessage;
 import java.net.URL;
-import java.util.HashMap;
 import java.util.ResourceBundle;
 
 public class BankController implements Initializable {
@@ -21,15 +19,8 @@ public class BankController implements Initializable {
     public ListView<ListViewLine> lvBankRequestReply;
     public TextField tfInterest;
 
-    public static String myRequestQueueBank="BrokerToBank";
-    public static String myReplyQueueBank="BankToBroker";
+    private BankBrokerAppGateway bankBrokerAppGateway;
 
-    MessageSenderGateway messageSenderGatewayBroker = new MessageSenderGateway(myReplyQueueBank);
-    MessageReceiverGateway messageReceiverGatewayBroker = new MessageReceiverGateway(myRequestQueueBank);
-
-    BankSerializer bankSerializer = new BankSerializer();
-
-    HashMap<ListViewLine,Message> hmap = new HashMap<>();
 
 
     @FXML
@@ -39,17 +30,9 @@ public class BankController implements Initializable {
         // TO DO: send a message with bankInterestReply
         ListViewLine selected = lvBankRequestReply.getSelectionModel().getSelectedItem();
         System.out.println("selected message :" + selected);
-        Message requestMsg = hmap.get(selected);
         selected.setBankInterestReply(bankInterestReply);
+        bankBrokerAppGateway.applyForBank(bankInterestReply,selected);
         lvBankRequestReply.refresh();
-        System.out.println("request message :" + requestMsg);
-        String jsonString =bankSerializer.replyToString(bankInterestReply);
-        // create a text message
-        Message banktobrokermessage = messageSenderGatewayBroker.createTextMessage(jsonString);
-        banktobrokermessage.setJMSCorrelationID(requestMsg.getJMSCorrelationID());
-        System.out.println("\nmessage to be sent:"+banktobrokermessage);
-        messageSenderGatewayBroker.send(banktobrokermessage);
-
 
     }
 
@@ -71,37 +54,27 @@ public class BankController implements Initializable {
 
     @Override
     public void initialize(URL location, ResourceBundle resources) {
-        try {
-            messageReceiverGatewayBroker.setListener(new MessageListener() {
-                @Override
-                public void onMessage(Message msg) {
-                    try {
-                        BankInterestRequest bankInterestRequest = bankSerializer.requestFromString(((TextMessage) msg).getText());
-                        System.out.println("\nnew object :time:"+bankInterestRequest.getTime()+"\n"+"amount:"+bankInterestRequest.getAmount());
-                        ListViewLine listViewLine = new ListViewLine(bankInterestRequest);
-                        Platform.runLater(new Runnable() {
-                            @Override
-                            public void run() {
-                                lvBankRequestReply.getItems().add(listViewLine);
+        bankBrokerAppGateway = new BankBrokerAppGateway() {
+            public void onBankRequestArrived(BankInterestRequest bankInterestRequest, ListViewLine listViewLine){
 
-                            }
-                        });
-                        System.out.println("hashmap input :"+bankInterestRequest.toString()+" & "+msg);
-                        hmap.put(listViewLine,msg);
-
-                    } catch (JMSException e) {
-                        e.printStackTrace();
-
+                Platform.runLater(new Runnable() {
+                    @Override
+                    public void run() {
+                        lvBankRequestReply.getItems().add(listViewLine);
 
                     }
-                }});
-            messageReceiverGatewayBroker.start(); // this is needed to start receiving messages
-        } catch (JMSException e) {
-            e.printStackTrace();
-        }
+                });
+                lvBankRequestReply.refresh();
+            }
+        };
     }
 
+
     void onBankReplyArrived(BankInterestReply bankInterestReply, BankInterestRequest bankInterestRequest){
+
+    }
+
+    void sendBankRequest(BankInterestRequest bankInterestRequest){
 
     }
 

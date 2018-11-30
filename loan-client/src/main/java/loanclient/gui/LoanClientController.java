@@ -4,15 +4,12 @@ import javafx.fxml.FXML;
 import javafx.fxml.Initializable;
 import javafx.scene.control.ListView;
 import javafx.scene.control.TextField;
-import loanclient.model.*;
-
+import loanclient.LoanBrokerAppGateway;
+import loanclient.model.LoanReply;
+import loanclient.model.LoanRequest;
 
 import javax.jms.JMSException;
-import javax.jms.Message;
-import javax.jms.MessageListener;
-import javax.jms.TextMessage;
 import java.net.URL;
-import java.util.HashMap;
 import java.util.ResourceBundle;
 
 public class LoanClientController implements Initializable {
@@ -22,21 +19,10 @@ public class LoanClientController implements Initializable {
     public TextField tfAmount;
     public TextField tfTime;
     public ListView<ListViewLine> lvLoanRequestReply;
-    HashMap<String,LoanRequest> hmap = new HashMap<>();
-
-    public static String myReplyQueue="BrokerToClient";
-    public static String myRequestQueue="ClientToBroker";
-
-    MessageSenderGateway messageSenderGatewayBroker = new MessageSenderGateway(myRequestQueue);
-    MessageReceiverGateway messageReceiverGatewayBroker = new MessageReceiverGateway(myReplyQueue);
-
-    LoanSerializer loanSerializer = new LoanSerializer();
-
-    String jsonString;
-
+    private LoanBrokerAppGateway loanBrokerAppGateway;
 
     @FXML
-    public void btnSendLoanRequestClicked() throws JMSException {
+    public void btnSendLoanRequestClicked() {
         // create the BankInterestRequest
         int ssn = Integer.parseInt(tfSsn.getText());
         int amount = Integer.parseInt(tfAmount.getText());
@@ -46,24 +32,15 @@ public class LoanClientController implements Initializable {
         //create the ListView line with the request and add it to lvLoanRequestReply
         ListViewLine listViewLine = new ListViewLine(loanRequest);
         lvLoanRequestReply.getItems().add(listViewLine);
-
+        try {
+            loanBrokerAppGateway.applyForLoan(loanRequest);
+        } catch (JMSException e) {
+            e.printStackTrace();
+        }
         // to do: send the message with this loanRequest...
-        Message msg = messageSenderGatewayBroker.createTextMessage(loanSerializer.RequestToString(loanRequest));
-        // print all message attributes; but JMSDestination is null
-        // session makes the message via MctiveMQ. AtiveMQ assigns unique JMSMessageID
-        // to each message.
-        System.out.println(msg);
 
-        messageSenderGatewayBroker.send(msg);
-
-        //System.out.println("id :" + msg.getJMSMessageID() + "\n" + "body:" + body + "\n");
-        hmap.put(msg.getJMSMessageID(),loanRequest);
         //print all message attributes; but JMSDestination is senderDestination name
-        System.out.println(msg);
-        System.out.println("JMSMessageID=" + msg.getJMSMessageID()
-                + " JMSDestination=" + msg.getJMSDestination()
-                + " Text=" + ((TextMessage) msg).getText());
-    }
+           }
 
 
     /**
@@ -88,27 +65,22 @@ public class LoanClientController implements Initializable {
         tfSsn.setText("123456");
         tfAmount.setText("80000");
         tfTime.setText("30");
-        try {
+        loanBrokerAppGateway = new LoanBrokerAppGateway() {
+            public void onLoanReplyArrived(LoanRequest loanRequest, LoanReply loanReply){
+                ListViewLine listViewLine = getRequestReply(loanRequest);
+                listViewLine.setLoanReply(loanReply);
+                lvLoanRequestReply.refresh();
+            }
+        };
 
-            messageReceiverGatewayBroker.setListener(new MessageListener() {
-                @Override
-                public void onMessage(Message msg) {
-                    try {
-                        System.out.println("\nloan reply :"+msg);
-
-                        ListViewLine listViewLine = getRequestReply(hmap.get(msg.getJMSCorrelationID()));
-                        listViewLine.setLoanReply(loanSerializer.replyFromString(((TextMessage) msg).getText()));
-                        lvLoanRequestReply.refresh();
-
-                    } catch (JMSException e) {
-                        e.printStackTrace();
-
-
-                    }
-                }});
-            messageReceiverGatewayBroker.start();
-        } catch (JMSException e) {
-            e.printStackTrace();
-        }
     }
+
+    void onLoanRequestArrived(LoanRequest loanRequest){
+
+    }
+
+    void sendLoanReply(LoanRequest loanRequest, LoanReply loanReply){
+
+    }
+
 }
