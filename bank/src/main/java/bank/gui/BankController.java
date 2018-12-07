@@ -14,22 +14,25 @@ import java.net.URL;
 import java.util.ResourceBundle;
 
 public class BankController implements Initializable {
-    private final String BANK_ID = "ABN";
+   //private final String BANK_ID = "ABN";
 
     public ListView<ListViewLine> lvBankRequestReply;
     public TextField tfInterest;
+    private String bankName;
 
     private BankBrokerAppGateway bankBrokerAppGateway;
 
-
+    BankController (String bankName){
+        this.bankName = bankName;
+    }
 
     @FXML
     public void btnSendBankInterestReplyClicked() throws JMSException {
         double interest = Double.parseDouble(tfInterest.getText());
-        BankInterestReply bankInterestReply = new BankInterestReply(interest, BANK_ID);
         // TO DO: send a message with bankInterestReply
         ListViewLine selected = lvBankRequestReply.getSelectionModel().getSelectedItem();
         System.out.println("selected message :" + selected);
+        BankInterestReply bankInterestReply = new BankInterestReply(interest, bankName,selected.getBankInterestRequest().getSsn(),selected.getBankInterestRequest().getTime(),selected.getBankInterestRequest().getAmount());
         selected.setBankInterestReply(bankInterestReply);
         bankBrokerAppGateway.applyForBank(bankInterestReply,selected);
         lvBankRequestReply.refresh();
@@ -54,7 +57,7 @@ public class BankController implements Initializable {
 
     @Override
     public void initialize(URL location, ResourceBundle resources) {
-        bankBrokerAppGateway = new BankBrokerAppGateway() {
+        bankBrokerAppGateway = new BankBrokerAppGateway(bankName) {
             public void onBankRequestArrived(BankInterestRequest bankInterestRequest, ListViewLine listViewLine){
 
                 Platform.runLater(new Runnable() {
@@ -69,14 +72,6 @@ public class BankController implements Initializable {
         };
     }
 
-
-    void onBankReplyArrived(BankInterestReply bankInterestReply, BankInterestRequest bankInterestRequest){
-
-    }
-
-    void sendBankRequest(BankInterestRequest bankInterestRequest){
-
-    }
 
 
 }

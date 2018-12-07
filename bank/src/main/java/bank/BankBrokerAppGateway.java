@@ -12,17 +12,19 @@ import java.util.HashMap;
 
 public abstract class BankBrokerAppGateway {
 
-    public static String myRequestQueueBank="BrokerToBank";
+    public static String myRequestQueueBank;
     public static String myReplyQueueBank="BankToBroker";
-
-    MessageSenderGateway messageSenderGatewayBroker = new MessageSenderGateway(myReplyQueueBank);
-    MessageReceiverGateway messageReceiverGatewayBroker = new MessageReceiverGateway(myRequestQueueBank);
+    MessageSenderGateway messageSenderGatewayBroker;
+    MessageReceiverGateway messageReceiverGatewayBroker ;
 
     BankSerializer bankSerializer = new BankSerializer();
 
     HashMap<ListViewLine,Message> hmap = new HashMap<>();
 
-    public BankBrokerAppGateway() {
+    public BankBrokerAppGateway(String bankName) {
+        myRequestQueueBank="BrokerTo"+bankName;
+        messageSenderGatewayBroker = new MessageSenderGateway(myReplyQueueBank);
+        messageReceiverGatewayBroker = new MessageReceiverGateway(myRequestQueueBank);
         try {
 
             messageReceiverGatewayBroker.setListener(new MessageListener() {
@@ -55,6 +57,7 @@ public abstract class BankBrokerAppGateway {
         // create a text message
         Message banktobrokermessage = messageSenderGatewayBroker.createTextMessage(jsonString);
         banktobrokermessage.setJMSCorrelationID(requestMsg.getJMSMessageID());
+        banktobrokermessage.setIntProperty("aggregationID",requestMsg.getIntProperty("aggregationID"));
         messageSenderGatewayBroker.send(banktobrokermessage);
         System.out.println("\nmessage sent:\n"+banktobrokermessage);
 

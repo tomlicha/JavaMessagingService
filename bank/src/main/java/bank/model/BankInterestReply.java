@@ -7,17 +7,26 @@ package bank.model;
  */
 public class BankInterestReply {
 
+    private int SSN;
+    private int amount;
+    private String bank; // the unique quote identification of the bank which makes the offer
     private double interest; // the interest that the bank offers for the requested loan
-    private String bankId; // the unique quote identification of the bank which makes the offer
-    
+    private int time;
+
     public BankInterestReply() {
+        this.SSN=0;
+        this.amount=0;
+        this.time=0;
         this.interest = 0;
-        this.bankId = "";
+        this.bank = "";
     }
-    
-    public BankInterestReply(double interest, String quoteId) {
+
+    public BankInterestReply(double interest, String bank, int SSN, int time, int amount) {
         this.interest = interest;
-        this.bankId = quoteId;
+        this.bank = bank;
+        this.SSN=SSN;
+        this.time=time;
+        this.amount=amount;
     }
 
     public double getInterest() {
@@ -28,15 +37,39 @@ public class BankInterestReply {
         this.interest = interest;
     }
 
-    public String getBankId() {
-        return bankId;
+    public String getBank() {
+        return bank;
     }
 
-    public void setBankId(String quoteId) {
-        this.bankId = quoteId;
+    public void setBank(String bank) {
+        this.bank = bank;
     }
 
     public String toString() {
-        return "quote=" + this.bankId + " interest=" + this.interest;
+        return "bank=" + this.bank + " interest=" + this.interest;
+    }
+
+    public int getSSN() {
+        return SSN;
+    }
+
+    public void setSSN(int SSN) {
+        this.SSN = SSN;
+    }
+
+    public int getAmount() {
+        return amount;
+    }
+
+    public void setAmount(int amount) {
+        this.amount = amount;
+    }
+
+    public int getTime() {
+        return time;
+    }
+
+    public void setTime(int time) {
+        this.time = time;
     }
 }

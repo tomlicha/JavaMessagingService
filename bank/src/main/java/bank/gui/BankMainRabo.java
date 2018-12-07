@@ -9,13 +9,17 @@ import javafx.scene.Scene;
 import javafx.stage.Stage;
 import javafx.stage.WindowEvent;
 
-public class BankMain extends Application {
+public class BankMainRabo extends Application {
 
     @Override
     public void start(Stage primaryStage) throws Exception{
         // load FXML file is in bank/src/main/resources/bank.fxml
-        Parent root = FXMLLoader.load(getClass().getClassLoader().getResource("bank.fxml"));
-        primaryStage.setTitle("BANK - ABN Amro");
+        FXMLLoader fxmlLoader = new FXMLLoader(getClass().getClassLoader().getResource("bank.fxml"));
+        BankController bankController = new BankController("Rabo");
+        //Parent root = FXMLLoader.load(getClass().getClassLoader().getResource("bank.fxml"));
+        fxmlLoader.setController(bankController);
+        Parent root = fxmlLoader.load();
+        primaryStage.setTitle("BANK - Rabo");
         primaryStage.setOnCloseRequest(new EventHandler<WindowEvent>() {
             @Override
             public void handle(WindowEvent event) {

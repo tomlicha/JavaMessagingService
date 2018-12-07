@@ -13,6 +13,24 @@ public class LoanRequest {
     private int ssn; // unique client number
     private int amount; // the ammount to borrow
     private int time; // the time-span of the loan in years
+    private int history=0;
+    private int credit=0;
+
+    public int getHistory() {
+        return history;
+    }
+
+    public void setHistory(int history) {
+        this.history = history;
+    }
+
+    public int getCredit() {
+        return credit;
+    }
+
+    public void setCredit(int credit) {
+        this.credit = credit;
+    }
 
     public LoanRequest() {
         super();
@@ -54,6 +72,6 @@ public class LoanRequest {
 
     @Override
     public String toString() {
-        return "ssn=" + String.valueOf(ssn) + " amount=" + String.valueOf(amount) + " time=" + String.valueOf(time);
+        return "ssn=" + String.valueOf(ssn) + " amount=" + String.valueOf(amount) + " time=" + String.valueOf(time) + " credit=" + String.valueOf(credit) + " history=" + String.valueOf(history);
     }
 }

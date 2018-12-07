@@ -1,7 +1,11 @@
 import javafx.application.Platform;
+import model.ContentEnricher;
 import model.LoanReply;
 import model.LoanRequest;
 import model.LoanSerializer;
+import org.json.JSONObject;
+import org.json.simple.parser.JSONParser;
+import org.json.simple.parser.ParseException;
 
 import javax.jms.JMSException;
 import javax.jms.Message;
@@ -28,15 +32,19 @@ public abstract class ClientAppGateway {
                 @Override
                 public void onMessage(Message msg) {
                     try {
+                        System.out.println("loan request created"+((TextMessage) msg).getText());
 
                         LoanRequest loanRequest = loanSerializer.requestFromString(((TextMessage) msg).getText());
-
+                        ContentEnricher contentEnricher = new ContentEnricher();
+                        String result = contentEnricher.GetRequest(loanRequest.getSsn());
+                        JSONObject jsonObj = new JSONObject(result);
+                        loanRequest.setCredit(jsonObj.getInt("creditScore"));
+                        loanRequest.setHistory(jsonObj.getInt("history"));
                         onLoanRequestArrived(loanRequest);
 
                         hmap.put(loanRequest,msg);
                     } catch (JMSException e) {
                         e.printStackTrace();
-
 
                     }
                 }});

@@ -16,6 +16,7 @@ public class BrokerController implements Initializable {
 
     ClientAppGateway clientAppGateway;
     BankAppGateway bankAppGateway;
+    ArchiveGateway archiveGateway = new ArchiveGateway();
     HashMap<BankInterestRequest,LoanRequest> hmap2 = new HashMap<>();
 
     public BrokerController() {
@@ -43,8 +44,8 @@ public class BrokerController implements Initializable {
         clientAppGateway = new ClientAppGateway() {
             @Override
             public void onLoanRequestArrived(LoanRequest loanRequest) {
+
                 ListViewLine listViewLine = new ListViewLine(loanRequest);
-                //hmap2.put(loanRequest,listViewLine);
                 Platform.runLater(new Runnable() {
                     @Override
                     public void run() {
@@ -53,7 +54,8 @@ public class BrokerController implements Initializable {
                         lvBrokerRequestReply.refresh();
                     }
                 });
-                BankInterestRequest bankInterestRequest = new BankInterestRequest(loanRequest.getAmount(),loanRequest.getTime());
+                //call the credit agency to get credit and history
+                BankInterestRequest bankInterestRequest = new BankInterestRequest(loanRequest.getAmount(),loanRequest.getTime(),loanRequest.getCredit(),loanRequest.getHistory(),loanRequest.getSsn());
                 hmap2.put(bankInterestRequest,loanRequest);
                 try {
                     bankAppGateway.sendLoanReply(bankInterestRequest);
@@ -79,7 +81,15 @@ public class BrokerController implements Initializable {
                     }
 
                 });
-                LoanReply loanReply = new LoanReply(bankInterestReply.getInterest(),bankInterestReply.getBankId());
+                if (bankInterestReply.getInterest() > 0){
+                    //send to archive service and then to the client
+                    //if not, just send it to the client / the loan hasn't been approved
+                    System.out.println("sending reply to archive :" + bankInterestReply.toString());
+                    archiveGateway.archive(bankInterestReply);
+
+                }
+
+                LoanReply loanReply = new LoanReply(bankInterestReply.getInterest(),bankInterestReply.getBank());
 
                 try {
                     clientAppGateway.sendLoanReply(loanReply,hmap2.get(bankInterestRequest));

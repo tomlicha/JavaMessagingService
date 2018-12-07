@@ -23,6 +23,7 @@
     <orderEntry type="library" name="Gradle: org.apache.activemq:activemq-core:5.7.0" level="project" />
     <orderEntry type="library" name="Gradle: org.slf4j:slf4j-nop:1.7.25" level="project" />
     <orderEntry type="library" name="Gradle: org.json:json:20180813" level="project" />
+    <orderEntry type="library" name="Gradle: com.owlike:genson:1.4" level="project" />
     <orderEntry type="library" name="Gradle: org.apache.activemq:kahadb:5.7.0" level="project" />
     <orderEntry type="library" name="Gradle: org.slf4j:slf4j-api:1.7.25" level="project" />
     <orderEntry type="library" name="Gradle: org.apache.geronimo.specs:geronimo-jms_1.1_spec:1.1.1" level="project" />
@@ -42,6 +43,5 @@
     <orderEntry type="library" name="Gradle: org.fusesource.hawtdispatch:hawtdispatch:1.11" level="project" />
     <orderEntry type="library" name="Gradle: aopalliance:aopalliance:1.0" level="project" />
     <orderEntry type="library" name="Gradle: commons-logging:commons-logging:1.1.1" level="project" />
-    <orderEntry type="library" name="Gradle: com.owlike:genson:1.4" level="project" />
   </component>
 </module>
